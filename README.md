@@ -1,19 +1,25 @@
-JSON Result Upload Demo
+<h1>JSON Result Upload Demo</h1>
 
-這是一個用於 JSON資料上傳測試結果的專案。
-透過 HTTP Server + Client，模擬將JSON POST 到 Server 的完整流程。
+- 這是一個用於 JSON資料上傳測試結果的專案。
+- 透過 HTTP Server + Client，模擬將JSON POST 到 Server 的完整流程。
 
-🔧 專案功能
+---
 
-✔ 內建 HTTP Server（HttpListener）
+<h2>🔧 專案功能</h2>
 
-✔ Client 自動讀取 JSON 並送出 POST
+- ✔ 內建 HTTP Server（HttpListener）
 
-✔ Server 顯示收到的 JSON 內容
+- ✔ Client 自動讀取 JSON 並送出 POST
 
-✔ 完整模擬設備「結果上報 API」
+- ✔ Server 顯示收到的 JSON 內容
 
-📂 專案結構
+- ✔ 完整模擬設備「結果上報 API」
+
+---
+
+<h2>📂 專案結構</h2>
+
+```
 json-result-upload-demo/
  ├── src/
  │    ├── Program.cs            # 啟動 Server + Client
@@ -23,8 +29,12 @@ json-result-upload-demo/
  ├── README.md
  ├── LICENSE
  └── .gitignore
+```
 
-🚀 使用方式（Run Demo）
+---
+
+<h2>🚀 使用方式（Run Demo）</h2>
+
 1️⃣ 準備 sample JSON
 
 請確保根目錄有：
@@ -32,6 +42,7 @@ sample-result.json
 
 內容示例：
 
+```
 {
   "sn": "ABC123456",
   "station": "TEST",
@@ -42,25 +53,29 @@ sample-result.json
   },
   "timestamp": "2025-01-01 12:30:00"
 }
+```
 
 2️⃣ 執行專案
 
 在 src/ 目錄執行：
 
+```
 dotnet run
-
+```
 
 程式會自動：
 
-啟動 HTTP Server (localhost:5000/upload)
+- 啟動 HTTP Server (localhost:5000/upload)
 
-讀取 sample-result.json
+- 讀取 sample-result.json
 
-用 Client 發送 POST
+- 用 Client 發送 POST
 
-Server 顯示收到的 JSON 內容
+- Server 顯示收到的 JSON 內容
 
 📡 Server 收到的示例輸出
+
+```
 [SERVER] server started on http://localhost:5000/upload
 === [SERVER] Received JSON ===
 {
@@ -74,26 +89,32 @@ Server 顯示收到的 JSON 內容
   "timestamp": "2025-01-01 12:30:00"
 }
 ================================
+```
 
-🧠 技術亮點
+---
 
-使用 HttpListener 建立簡易REST API
+<h2>🧠 技術亮點</h2>
 
-完整模擬設備 Result Upload API（POST JSON）
+- 使用 HttpListener 建立REST API
 
-HttpClient 送出 JSON 並解析回應
+- 完整模擬設備 Result Upload API（POST JSON）
 
-啟動同時啟動 Server + Client
+- HttpClient 送出 JSON 並解析回應
 
-資源管理完整（Listener、Stream、Client 都能 Stop）
+- 啟動同時啟動 Server + Client
 
-🏭 適用場景
+- 資源管理完整（Listener、Stream、Client 都能 Stop）
 
-JSON 格式上傳 Demo
+---
 
-Client → Server測試結果上報流程展示
+<h2>🏭 適用場景</h2>
 
-👤 作者
+- JSON 格式上傳 Demo
+
+- Client → Server測試結果上報流程展示
+
+<h2>👤 作者</h2>
 
 HungHsiang, Lin（林弘翔）
+
 Software Engineer — MES / Equipment Communication / Automation
